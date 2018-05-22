@@ -1,0 +1,19 @@
+{
+  "name": "myapp",
+  "version": "1.0.1",
+  "description": "no",
+  "main": "app.js",
+  "scripts": {
+    "start": "hi node"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.14.0",
+    "mongodb": "^2.2.31",
+    "mongodb-stitch": "0.0.25",
+    "mysql": "^2.5.4",
+    "nodemailer": "^4.1.3",
+    "socket.io": "^2.0.4"
+  }
+}
