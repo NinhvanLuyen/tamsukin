@@ -3,7 +3,7 @@ var app = express()
 var http = require('http')
 fs = require('fs')
 var port = 4000;
-var mysql = require('mysql');
+// var mysql = require('mysql');
 const nodemailer = require('nodemailer');
 const io = require('socket.io')(http);
 const port_io = 8002;
@@ -23,16 +23,16 @@ console.log('listening on port ', port_io);
 
 
 
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'vnpet'
-});
+// var connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'root',
+//     database: 'vnpet'
+// });
 var router = express.Router();
 var counter = 0;
 
-connection.connect();
+// connection.connect();
 
 //  more than one callback funtion to handler a route
 
@@ -113,7 +113,7 @@ var middleLoginRoute = function (req, res, next) {
     next();
 }
 
-router.use("/login", middleLoginRoute);
+// router.use("/login", middleLoginRoute);
 
 
 app.get('/', function (req, res) {
@@ -121,18 +121,18 @@ app.get('/', function (req, res) {
 })
 
 
-app.post("/login", function (req, res) {
-    console.log("hello_im postting");
-
-    connection.query('SELECT * from user', function (err, rows, fields) {
-        if (!err)
-            res.send(rows);
-        else
-            res.send("not found user");
-    });
-
-    // connection.end();
-})
+// app.post("/login", function (req, res) {
+//     console.log("hello_im postting");
+//
+//     connection.query('SELECT * from user', function (err, rows, fields) {
+//         if (!err)
+//             res.send(rows);
+//         else
+//             res.send("not found user");
+//     });
+//
+//     // connection.end();
+// })
 
 
 app.use(express.static('public'));
