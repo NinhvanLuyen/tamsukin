@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.14.0",
-    "mongodb": "^2.2.31",
+    "mongodb": "^3.6.1",
     "mongodb-stitch": "0.0.25",
     "mysql": "^2.5.4",
     "nodemailer": "^4.1.3",
